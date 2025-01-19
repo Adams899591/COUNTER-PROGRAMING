@@ -1,0 +1,111 @@
+        /* my Coadind on count  */
+
+
+.count2{
+     display: block;
+    font-size:100px ;
+    font-family: 'Courier New', Courier, monospace;
+    color:red;
+    text-align:center;
+}
+.cy{
+    text-align: center;
+}
+.DRI{
+    font-size: large;
+    padding: 2%;
+    color: white;
+    background-color: black;
+    box-shadow: 0px 8px 8px 0px green;
+}
+.DRI:hover{
+    background-color: red;
+    color: blue;
+}
+                    
+                /* my coading on form  */
+
+.container {
+    margin-left: 20%;
+    background-color: rgba(0, 128, 0, 0.925);
+    padding: 1%;
+    /* padding-right:2% ; */
+    width: 50%;
+    box-shadow: 5px 10px 10px 5px blueviolet ;
+    border-radius: 2%;
+    border-style: hidden;
+
+}
+.input{
+    width:300px ;
+    height:25px;
+    text-align: center;
+    border-radius: 1%;
+    border-style: hidden;
+
+}
+.submit{
+    width:650px ;
+    height:30px ;
+    text-align: center;
+    margin-top: 3%;
+    background-color: darkslategray;
+    margin-left: 2%;
+    
+}
+
+
+                                  /* /* my coad on select button */
+.submit2:hover{
+    background-color: blue;
+}
+/* 
+.box{
+    border: 3px solid;
+    width: 100%;
+    height:125px ;
+} */
+
+#mybox{
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    font-size: 4.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+.MYbutton{
+    padding: 2%;
+    font-weight: bold;
+    background-color: rgb(0, 153, 255);
+    border-radius: 9%;
+    box-shadow: 0px 2px 0px 1px red;
+    margin: 10px;
+}
+
+.containerpp{
+    text-align: center;
+}
+.buttonpp{
+    padding: 1%;
+    margin: 1%;
+    margin-top: -2;
+    background-color: rgba(137, 43, 226, 0.644);
+    font-size: larger;
+    border-radius: 50%;
+}
+.buttonpp:hover{
+    background-color: rgba(165, 42, 42, 0.973);
+    cursor: pointer;
+
+}
+.greentext ,#playerscoredisplay{
+    color: green;
+}
+.redtext{
+    color: red;
+}
