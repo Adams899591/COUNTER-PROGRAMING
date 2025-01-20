@@ -270,85 +270,45 @@ const computerdisplay = document.getElementById("computerdisplay");
  const playerscoredisplay = document.getElementById("playerscoredisplay");
  const computerscoredisplay = document.getElementById("computerscoredisplay");
 
- let playerscore = 0;
- let computerscore = 0;
+            // my work on image slide
 
-function  playgame(playerchoice){
-  
-  //  computerchoice  = (Math.random() * choice)
-  computerchoice  = choice[Math.floor(Math.random()* 3)   ]
-  //  console.log(computerchoice);
+const slides = document.querySelectorAll(".slide");
+const back = document.getElementById("back")
 
-   result = "";
-   playerchoice;
+let slideindex  =0;
+let intervalid = null;
 
-   if (playerchoice === computerchoice) {
-          result = "it is is a tie "
-    
-   } else {
-    switch (playerchoice) {
-      case "Rock":
-       result = (computerchoice ===  "Scissors" ) ? "You Win!" : "you Loose!"
-        break;
+       // firstimgdisplay()
+document.addEventListener("DOMContentLoaded" ,function (event){firstimgdisplay() })
 
-      case "Paper":
-        result = (computerchoice ===  "Rock" ) ? "You Win!" : "you Loose!"
-          break;
-      case "Scissors":
-          result = (computerchoice ===  "Rock" ) ? "You Win!" : "you Loose!"
-             break;
-    
-    
-    }
-   }
+function firstimgdisplay() {
 
-   playerdisplay.textContent = `Player: ${playerchoice}`;
-   computerdisplay.textContent = `Computer: ${computerchoice}`;
-   resultdisplay.textContent = result
-
-      resultdisplay.classList.remove("redtaxt", "greentaxt")
-   switch (result) {
-    case "You Win!":
-      resultdisplay.classList.add("greentext");
-      playerscore++;
-      playerscoredisplay.textContent = playerscore
-
-      break;
-    case "you Loose!":
-        resultdisplay.classList.add("redtext");
-        computerscore++
-        computerscoredisplay.textContent =  computerscore;
-        break;
-    case "it is is a tie ":
-          resultdisplay.classList.remove("redtaxt", "greentaxt")
-          break;
-   
-   
-   }
-   
-
+if (slides.length > 0 ) {
+  slides[slideindex].classList.add("showslide");
+  intervalid = setInterval(nextslide, 3000);
 }
 
-   
+  
+}
 
+function showslide(index) {
 
+  if (index >= slides.length) {
+    slideindex = 0
+  } else if (index < 0 ) {
+    slideindex = slides.length -1;
+  
+    
+  }
+  slides.forEach( slide => {
+    slide.classList.remove("showslide")
+  });
+  slides[ slideindex].classList.add("showslide")
+  
+}
 
+function nextslide() {
+  slideindex++ ;
+  showslide( slideindex)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
+}

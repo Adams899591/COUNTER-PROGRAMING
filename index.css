@@ -104,8 +104,25 @@
 
 }
 .greentext ,#playerscoredisplay{
-    color: green;
+    color:blue;
 }
 .redtext{
     color: red;
+}
+
+                  /* my work on image slider */
+
+#slider{
+text-align: center;
+overflow: hidden;
+position: relative;
+
+}
+.slide{
+    display: none;
+    width: 300px;
+    height: 200px;  
+}
+.showslide{
+    display: block;
 }
