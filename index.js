@@ -266,49 +266,85 @@ login.onclick = function () {
     choice = ["Rock", "Paper" , "Scissors"];
 const playerdisplay =  document.getElementById("playerdisplay");
 const computerdisplay = document.getElementById("computerdisplay");
- const resultdisplay = document.getElementById("resultdisplay");
+ let resultdisplay = document.getElementById("resultdisplay");
  const playerscoredisplay = document.getElementById("playerscoredisplay");
  const computerscoredisplay = document.getElementById("computerscoredisplay");
 
-            // my work on image slide
 
-const slides = document.querySelectorAll(".slide");
-const back = document.getElementById("back")
+username = "Joseph";
+ let playerscore = 0;
+ let computerscore = 0;
 
-let slideindex  =0;
-let intervalid = null;
+  function playgame(forplayer) {
+        forcomputer = choice[Math.floor(Math.random() * 3)];
+        console.log(  forcomputer);
 
-       // firstimgdisplay()
-document.addEventListener("DOMContentLoaded" ,function (event){firstimgdisplay() })
+        if (forplayer === forcomputer) {
+          resultdisplay.textContent = `it is a tie between  ${username} and computer`;
+          playerdisplay.textContent =`${forplayer}`;
+          computerdisplay.textContent =   forcomputer;
+        } else {
+           
+        switch (forplayer) {
+          case"Rock" :
+          resultdisplay.textContent =   (forcomputer === "Paper" ) ? `You win!  ${username}` : `You lose ${username}`;
+          playerdisplay.textContent =`${forplayer}`;
+          computerdisplay.textContent =   forcomputer;
+            break;
 
-function firstimgdisplay() {
+          case"Paper" :
+            resultdisplay.textContent =   (forcomputer === "Scissors" ) ? `You win!  ${username}` : `You lose ${username}`;
+            playerdisplay.textContent =`${forplayer}`;
+            computerdisplay.textContent =   forcomputer;
+              break;
 
-if (slides.length > 0 ) {
-  slides[slideindex].classList.add("showslide");
-  intervalid = setInterval(nextslide, 3000);
-}
+           case"Scissors" :
+              resultdisplay.textContent =   (forcomputer === "Rock" ) ? `You win!  ${username}` : `You lose ${username}`;
+              playerdisplay.textContent =`${forplayer}`;
+              computerdisplay.textContent =   forcomputer;
+                break;
 
-  
-}
+                 
+ 
+     
+        }
+        }
 
-function showslide(index) {
 
-  if (index >= slides.length) {
-    slideindex = 0
-  } else if (index < 0 ) {
-    slideindex = slides.length -1;
-  
+ if ( resultdisplay.textContent  ===  `You win!  ${username}`  ) {
+    
+        playerscore++
+         playerscoredisplay.textContent =  playerscore;
+  }
+  if (resultdisplay.textContent  ==   `You lose ${username}` ) {
+    computerscore++
+    computerscoredisplay.textContent = computerscore;
+  }
     
   }
-  slides.forEach( slide => {
-    slide.classList.remove("showslide")
-  });
-  slides[ slideindex].classList.add("showslide")
-  
+            // my work on image slide
+
+// console.log(navigator.cookieEnabled);
+//   document.cookie = "firstname = Usman; expires = Sun, 1 may 2025  12:00:00 UTC; "
+// document.cookie = "lastname = Adams ; expires = Sun, 1 may 2025 12:00:00 UTC; "
+// console.log( document.cookie);
+
+// setcookie("email", "usman@gmail.com", 365)
+console.log(document.cookie);
+deletecookies("email")
+// deletecookies("firstname")
+// deletecookies("lastname")
+
+
+
+function setcookie(name , value ,daystolive) {
+     const date = new Date();
+     date.setTime(date.getTime() + daystolive * 24 * 60* 60*1000)
+     let expires = "expires" + date.toUTCString();
+     document.cookie = `${name} = ${value}; ${expires}; path/`
 }
 
-function nextslide() {
-  slideindex++ ;
-  showslide( slideindex)
-
+function deletecookies(name) {
+  setcookie(name ,null, null)
 }
+
