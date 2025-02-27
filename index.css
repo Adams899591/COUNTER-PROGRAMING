@@ -21,7 +21,8 @@
  }
  .MOVE-CONTENT{
     overflow-y: auto;
-   
+   flex-wrap: wrap;
+   align-content: flex-start;
  }
  .header-end{
     display: flex;
