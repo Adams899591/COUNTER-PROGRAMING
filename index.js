@@ -324,27 +324,4 @@ username = "Joseph";
   }
             // my work on image slide
 
-// console.log(navigator.cookieEnabled);
-//   document.cookie = "firstname = Usman; expires = Sun, 1 may 2025  12:00:00 UTC; "
-// document.cookie = "lastname = Adams ; expires = Sun, 1 may 2025 12:00:00 UTC; "
-// console.log( document.cookie);
-
-// setcookie("email", "usman@gmail.com", 365)
-console.log(document.cookie);
-deletecookies("email")
-// deletecookies("firstname")
-// deletecookies("lastname")
-
-
-
-function setcookie(name , value ,daystolive) {
-     const date = new Date();
-     date.setTime(date.getTime() + daystolive * 24 * 60* 60*1000)
-     let expires = "expires" + date.toUTCString();
-     document.cookie = `${name} = ${value}; ${expires}; path/`
-}
-
-function deletecookies(name) {
-  setcookie(name ,null, null)
-}
 

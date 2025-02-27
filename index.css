@@ -1,4 +1,77 @@
-        /* my Coadind on count  */
+/*  
+ *{
+    margin: 0%;
+    padding: 0%;
+ } */
+ .header{
+
+    display: flex;
+    font-weight: bolder;
+    font-size: 50px;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-style: dotted;
+    height: 100px;
+    top: 0%;
+    width: 95%;
+    padding: 1%;
+    background-color: rgba(0, 0, 255, 0.623);
+    position: fixed;
+    
+ }
+ .MOVE-CONTENT{
+    overflow-y: auto;
+   
+ }
+ .header-end{
+    display: flex;
+    font-weight: bolder;
+    font-size: 50px;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-style: dotted;
+    height: 100px;
+    width: 95%;
+    padding: 1%;
+    background-color: rgba(0, 128, 0, 0.507);
+    /* top: 100px; */
+    /* position: absolute;
+    z-index: 10; */
+    bottom: 0%;
+    position: fixed;
+ }
+ 
+ 
+ 
+ /* my Coadind on count  */
+
+@media(max-width: 1200px){
+    body{
+        width: 200%;
+        /* background-color: orangered; */
+
+ 
+            /* .submit{ */
+                /* max-width: 60%; */
+                /* display: flex; */
+
+            
+            /* }  */
+            /* .input{ */
+                /* max-width: 70%; */
+                /* display: flex; 
+                flex-direction: column; */
+            /* } */
+
+            /* .container{
+                 display: flex; 
+                flex-direction: column;
+            } */
+    }
+
+}
+
+
 
 
 .count2{
@@ -30,18 +103,52 @@
     background-color: rgba(0, 128, 0, 0.925);
     padding: 1%;
     /* padding-right:2% ; */
-    width: 50%;
+   max-width: 50%;
+    /* width: 1000px; */
+    /* max-width: 50%; */
     box-shadow: 5px 10px 10px 5px blueviolet ;
     border-radius: 2%;
     border-style: hidden;
 
+
+
+    /* display: flex; 
+    flex-direction: column; */
+
 }
+
+
+
+/* .newwork{
+    max-width: 1400px;
+}
+
+@media (max-width: 600px){
+    .newwork{
+        max-width:auto ;
+        background-color: orangered;
+        font-size: 11px;
+        padding: 0%;
+        margin: 0%;
+    }
+} */
+
+
+
+
+
+
+
+
+
 .input{
     width:300px ;
     height:25px;
     text-align: center;
     border-radius: 1%;
     border-style: hidden;
+    /* display: flex; 
+    flex-direction: column; */
 
 }
 .submit{
@@ -109,5 +216,50 @@
 .redtext{
     color: red;
 }
+                           /* <!-- tutorials on flex=box --> */
 
-                  /* my work on image slider */
+
+.flex-box{
+    display: grid;
+    border: 10px solid black;
+    grid-template-columns: 200px 250px;
+    grid-auto-rows: minmax(150px,auto );
+    grid-gap: 23px;
+    
+     height: 100vh;
+
+
+ }                                    
+.flex-box-n{
+   /* width: 100px;
+   height: 150px; */
+   border-radius: 20px;
+   /* text-align: center; */
+   font-weight: bolder;
+   font-size: 70px;
+   /* align-items: center; */
+}
+#flex-box-1{
+   align-self: start;
+   justify-self: center;
+    /* grid-column: span 2;     */
+    background-color: blue;   
+}
+#flex-box-2{
+    background-color:red; 
+    /* grid-column: span 3; */
+   /* grid-row-start: 2;
+   grid-row-end: 4; */
+}
+#flex-box-3{
+    background-color: green;
+    /* grid-area: content; */
+   
+}
+#flex-box-4{
+    background-color: yellow;
+}
+#flex-box-5{
+    background-color: rgba(137, 43, 226, 0.24);
+    
+}
